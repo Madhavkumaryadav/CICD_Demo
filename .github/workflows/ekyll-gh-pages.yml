@@ -20,10 +20,10 @@ jobs:
 
     steps:
       - name: Checkout
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       - name: Setup Pages 
-        uses: actions/configure-pages@v2
+        uses: actions/configure-pages@v4
 
       - name: Build with Jekyll
         uses: actions/jekyll-build-pages@v1
@@ -32,7 +32,7 @@ jobs:
           destination: ./_site
 
       - name: Upload artifact 
-        uses: actions/upload-pages-artifact@v1
+        uses: actions/upload-pages-artifact@v3
         with:
           path: ./_site
 
@@ -47,6 +47,4 @@ jobs:
     steps:
       - name: Deploy to Github pages 
         id: deployment 
-        uses: actions/deploy-pages@v1
-
-        
+        uses: actions/deploy-pages@v4
